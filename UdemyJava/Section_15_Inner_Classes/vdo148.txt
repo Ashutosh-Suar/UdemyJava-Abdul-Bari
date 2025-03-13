@@ -1,0 +1,29 @@
+class Outer {
+    int x = 10;
+
+    class Inner {
+        int y = 20;
+
+        void innerDisplay() {
+            s.o.pln(x);
+            s.o.pln(y);
+        }
+    }
+
+    void outerDisplay() {
+        Inner i = new Inner();
+        i.innerDisplay();
+        s.o.p(i.y);
+    }
+}
+
+class Test {
+
+    psvm(String[] args) {
+
+        Outer o = new Outer();
+        o.outerDisplay();
+
+        Outer.inner i = new Outer().new Inner();
+    }
+}

@@ -1,0 +1,31 @@
+class Outer {
+
+    void Display() {
+        class Inner {
+            void innerDisplay() {
+                s.o.p("Hello");
+            }
+        }
+
+        Inner i = new Inner();
+        i.innerDisplay();
+    }
+}
+
+// Anonymous classes
+
+abstract class My {
+    abstract void display();
+}
+
+class Outer {
+    public void meth() {
+        My m = new My(){
+            public void display() {
+            s.o.p("Hello");
+            }
+        };
+        m.display();
+        
+    }
+}
